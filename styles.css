@@ -120,8 +120,6 @@ body::before {
 
 /* Summary screen */
 .summary {
-  text-align: center;
-  padding: 1.5rem;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -131,6 +129,7 @@ body::before {
   background: rgba(0,0,0,0.25);
   backdrop-filter: blur(6px);
   z-index: 10;
+  padding: 0; /* ✅ Remove extra padding */
 }
 
 .summary-card {
@@ -242,6 +241,7 @@ body::before {
 
   body::before { font-size: 0.9rem; top: 15%; }
 }
+
 
 
 
