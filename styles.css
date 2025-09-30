@@ -41,6 +41,7 @@ body::before {
   to { left: 120%; }
 }
 
+/* App container */
 .app {
   text-align: center;
   padding-top: 1rem;
@@ -50,6 +51,7 @@ body::before {
   align-items: center;
 }
 
+/* Title styling */
 .app-title {
   font-family: 'Fredoka One', 'Poppins', sans-serif;
   font-size: 3rem;
@@ -68,6 +70,7 @@ body::before {
   to { text-shadow: 2px 2px 10px rgba(0,0,0,0.5), 0 0 20px rgba(255,79,129,0.9), 0 0 40px rgba(255,182,193,1); }
 }
 
+/* Card container */
 .card-container {
   position: relative;
   width: 90%;
@@ -88,6 +91,7 @@ body::before {
   will-change: transform;
 }
 
+/* Buttons row */
 .buttons {
   display: flex;
   justify-content: space-around;
@@ -103,10 +107,13 @@ body::before {
   border-radius: 15px;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn:hover { transform: scale(1.05); }
+.btn:hover { 
+  transform: scale(1.05); 
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
 
 .like { background: #ff4f81; color: white; }
 .dislike { background: #444; color: white; }
@@ -156,8 +163,9 @@ body::before {
   font-size: 1rem;
   color: #fff;
   margin-bottom: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.5;
   text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  font-family: 'Baloo 2', 'Poppins', sans-serif;
 }
 
 /* Liked cats grid */
@@ -193,10 +201,13 @@ body::before {
   border-radius: 15px;
   border: none;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.restart:hover { background: #e33b6a; }
+.restart:hover { 
+  background: #e33b6a; 
+  transform: scale(1.05);
+}
 
 .hidden { display: none !important; }
 
@@ -209,26 +220,30 @@ body::before {
   .btn { font-size: 1rem; padding: 0.7rem; }
 
   .summary-card { 
-    padding: 1.5rem; 
-    width: 95%; 
-    max-width: 340px; 
+    padding: 1.2rem; 
+    width: 92%; 
+    max-width: 320px; 
+    border-radius: 20px;
   }
-  .summary h2 { font-size: 1.4rem; }
-  #summary-text { font-size: 0.9rem; }
+  .summary h2 { font-size: 1.3rem; }
+  #summary-text { font-size: 0.85rem; }
 
   .liked-cats { 
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); 
-    gap: 10px; 
+    gap: 8px; 
   }
-  .liked-cats img { border-radius: 10px; }
+  .liked-cats img { border-radius: 8px; }
 
   .restart { 
-    font-size: 0.9rem; 
-    padding: 0.6rem 1.2rem; 
+    font-size: 0.85rem; 
+    padding: 0.5rem 1rem; 
+    border-radius: 10px;
   }
 
-  body::before { font-size: 1rem; top: 15%; }
+  body::before { font-size: 0.9rem; top: 15%; }
 }
+
+
 
 
 
